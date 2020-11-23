@@ -1,4 +1,4 @@
-# EnDeCrypter-public
+# EnDeCrypter-public ([пример](https://appgallery.huawei.com/#/app/C103224903 "Установить через Huawei AppGallery"))
 
 ## О приложении
 
