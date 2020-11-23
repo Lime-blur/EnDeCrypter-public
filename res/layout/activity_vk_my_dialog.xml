@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <ListView
+            android:id="@+id/myDialogListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="50dp"
+            android:divider="@null"
+            tools:ignore="NestedScrolling" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/sendMessageEdit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:autofillHints=""
+        android:background="#F0F0F0"
+        android:gravity="center_vertical"
+        android:hint="Введите сообщение"
+        android:padding="10dp"
+        android:paddingStart="65dp"
+        android:paddingEnd="80dp"
+        android:singleLine="true"
+        android:textColorLink="#FFFFFF"
+        tools:ignore="HardcodedText, LabelFor, TextFields" />
+
+    <ImageButton
+        android:id="@+id/imageButtonEncrypt"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="0dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/my_dialog_send"
+        android:onClick="encryptMessage"
+        android:scaleType="centerCrop"
+        android:visibility="visible"
+        android:src="@drawable/ic_encrypt"
+        tools:ignore="RelativeOverlap" />
+
+    <ImageButton
+        android:id="@+id/imageButtonSend"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="0dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/my_dialog_send"
+        android:onClick="sendMessage"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        android:src="@drawable/ic_send_crypted"
+        tools:ignore="RelativeOverlap" />
+
+    <ProgressBar
+        android:id="@+id/myDialogProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/layout_white_bg"
+        android:elevation="999dp"
+        android:padding="15dp"
+        android:scrollbarAlwaysDrawHorizontalTrack="false"
+        android:scrollbarAlwaysDrawVerticalTrack="false"
+        android:visibility="gone" />
+
+</RelativeLayout>

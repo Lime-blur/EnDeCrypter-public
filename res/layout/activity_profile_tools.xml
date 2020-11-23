@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="UselessParent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:id="@+id/friendsCountTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="10dip"
+            android:layout_marginEnd="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginBottom="10dip"
+            android:text="@string/friends_count_in_list"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/friendsCount"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/friendsCountTitle"
+            android:layout_marginStart="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginEnd="10dip"
+            android:layout_marginRight="10dip"
+            android:autofillHints=""
+            android:background="@drawable/layout_edit_bg"
+            android:gravity="center_vertical"
+            android:inputType="number"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColorLink="#FFFFFF"
+            tools:ignore="LabelFor, TextFields" />
+
+        <TextView
+            android:id="@+id/postsCountTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/friendsCount"
+            android:layout_marginStart="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="10dip"
+            android:layout_marginEnd="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginBottom="10dip"
+            android:text="@string/posts_count_in_list"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/postsCount"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/postsCountTitle"
+            android:layout_marginStart="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginEnd="10dip"
+            android:layout_marginRight="10dip"
+            android:autofillHints=""
+            android:background="@drawable/layout_edit_bg"
+            android:gravity="center_vertical"
+            android:inputType="number"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColorLink="#FFFFFF"
+            tools:ignore="LabelFor, TextFields" />
+
+        <TextView
+            android:id="@+id/dialogsCountTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/postsCount"
+            android:layout_marginStart="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="10dip"
+            android:layout_marginEnd="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginBottom="10dip"
+            android:text="@string/dialogs_count"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/dialogsCount"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/dialogsCountTitle"
+            android:layout_marginStart="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginEnd="10dip"
+            android:layout_marginRight="10dip"
+            android:autofillHints=""
+            android:background="@drawable/layout_edit_bg"
+            android:gravity="center_vertical"
+            android:inputType="number"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColorLink="#FFFFFF"
+            tools:ignore="LabelFor, TextFields" />
+
+        <TextView
+            android:id="@+id/myDialogMessagesCountTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dialogsCount"
+            android:layout_marginStart="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="10dip"
+            android:layout_marginEnd="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginBottom="10dip"
+            android:text="@string/messages_array_size_in_dialog"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/myDialogMessagesCount"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/myDialogMessagesCountTitle"
+            android:layout_marginStart="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginEnd="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginBottom="10dip"
+            android:autofillHints=""
+            android:background="@drawable/layout_edit_bg"
+            android:gravity="center_vertical"
+            android:inputType="number"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColorLink="#FFFFFF"
+            tools:ignore="LabelFor, TextFields" />
+
+        <Button
+            android:id="@+id/saveSettings"
+            style="@android:style/Widget.Holo.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/myDialogMessagesCount"
+            android:layout_marginStart="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginEnd="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginBottom="10dip"
+            android:background="@drawable/layout_button_bg"
+            android:text="@string/save_settings"
+            android:stateListAnimator="@null"
+            android:onClick="saveProfileSettings" />
+
+        <Button
+            android:id="@+id/logoutButton"
+            style="@android:style/Widget.Holo.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/saveSettings"
+            android:layout_marginStart="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginEnd="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginBottom="10dip"
+            android:background="@drawable/layout_button_bg"
+            android:backgroundTint="#FF8585"
+            android:onClick="profileLogout"
+            android:stateListAnimator="@null"
+            android:text="@string/logout" />
+
+    </RelativeLayout>
+</ScrollView>

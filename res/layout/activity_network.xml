@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/networkSmileImageView"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/networkDividerCenter"
+        android:background="@drawable/layout_white_bg"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/vk"
+        android:scaleType="centerInside"
+        android:scrollbarAlwaysDrawHorizontalTrack="false"
+        android:scrollbarAlwaysDrawVerticalTrack="false"
+        app:srcCompat="@drawable/ic_smile" />
+
+    <TextView
+        android:id="@+id/networkDividerCenter"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:id="@+id/networkInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="sans-serif-thin"
+        android:gravity="center"
+        android:layout_below="@id/networkDividerCenter"
+        android:text="@string/network_trouble"
+        android:textColor="#2B2B2B"
+        android:textSize="18sp" />
+
+</RelativeLayout>

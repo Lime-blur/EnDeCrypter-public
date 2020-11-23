@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="UselessParent">
+
+    <RelativeLayout
+        android:id="@+id/vkRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:id="@+id/algorithmHelpText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="10dip"
+            android:layout_marginEnd="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginBottom="10dip"
+            android:text="@string/key_info"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/algorithmKeyArea"
+            android:layout_width="155dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/algorithmHelpText"
+            android:layout_marginStart="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginEnd="10dip"
+            android:layout_marginRight="10dip"
+            android:autofillHints=""
+            android:background="@drawable/layout_edit_bg"
+            android:gravity="center|start"
+            android:hint="Введите ключ"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textAlignment="textStart"
+            android:textColorLink="#FFFFFF"
+            tools:ignore="HardcodedText, LabelFor, TextFields" />
+
+        <Spinner
+            android:id="@+id/algorithmSpinner"
+            style="@android:style/Widget.Holo.Button"
+            android:layout_width="fill_parent"
+            android:layout_height="45dip"
+            android:layout_below="@+id/algorithmHelpText"
+            android:layout_marginStart="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginEnd="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_toEndOf="@+id/algorithmKeyArea"
+            android:background="@drawable/layout_edit_bg"
+            android:padding="5dp"
+            android:entries="@array/cryptNames" />
+
+        <TextView
+            android:id="@+id/algorithmResultTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/algorithmSpinner"
+            android:layout_marginStart="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="10dip"
+            android:layout_marginEnd="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginBottom="10dip"
+            android:text="Исходный код алгоритма (генерируется автоматически):"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/algorithmResult"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/algorithmResultTitle"
+            android:layout_marginStart="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginEnd="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginBottom="10dip"
+            android:autofillHints=""
+            android:background="@drawable/layout_edit_bg"
+            android:padding="10dp"
+            android:textColorLink="#FFFFFF"
+            tools:ignore="HardcodedText, LabelFor, TextFields" />
+
+        <Button
+            android:id="@+id/saveStepButton"
+            style="@android:style/Widget.Holo.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/algorithmResult"
+            android:layout_marginStart="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginEnd="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginBottom="10dip"
+            android:background="@drawable/layout_button_bg"
+            android:onClick="saveAlgorithmStep"
+            android:text="Добавить шаг алгоритма"
+            android:stateListAnimator="@null"
+            tools:ignore="HardcodedText, RtlHardcoded" />
+
+        <Button
+            android:id="@+id/applyAlgorithmButton"
+            style="@android:style/Widget.Holo.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/saveStepButton"
+            android:layout_marginStart="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginEnd="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginBottom="10dip"
+            android:background="@drawable/layout_button_bg"
+            android:onClick="applyAlgorithm"
+            android:text="Применить алгоритм"
+            android:stateListAnimator="@null"
+            tools:ignore="HardcodedText, RtlHardcoded" />
+
+        <Button
+            android:id="@+id/shareAlgorithmButton"
+            style="@android:style/Widget.Holo.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/applyAlgorithmButton"
+            android:layout_marginStart="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginEnd="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginBottom="10dip"
+            android:background="@drawable/layout_button_bg"
+            android:onClick="shareAlgorithm"
+            android:text="Поделиться алгоритмом"
+            android:stateListAnimator="@null"
+            tools:ignore="HardcodedText, RtlHardcoded" />
+
+    </RelativeLayout>
+</ScrollView>

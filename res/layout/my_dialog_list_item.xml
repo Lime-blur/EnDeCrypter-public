@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:id="@+id/myDialogForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_edit_bg"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="8dp"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/myDialogTextItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:gravity="left|center_vertical"
+            android:minWidth="55dp"
+            android:textColor="#2B2B2B"
+            android:textSize="15sp"
+            tools:ignore="RelativeOverlap,RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/myDialogTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/myDialogTextItem"
+            android:layout_alignEnd="@id/myDialogTextItem"
+            android:fontFamily="sans-serif"
+            android:gravity="bottom|end"
+            android:textColor="#B8B8B8"
+            android:textSize="10sp"
+            android:paddingTop="4dp"
+            tools:ignore="RtlHardcoded,SmallSp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">EnDeCrypter Beta</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="profile_title">Профиль</string>
+    <string name="tools_title">Настройки</string>
+    <string name="algorithm_title">Создание EnDe алгоритма</string>
+    <string name="dialogs_title">EnDe Диалоги</string>
+    <string name="my_dialog_title">EnDe Диалог</string>
+    <string name="dialogs_avatar_photo">Фото профиля</string>
+    <string name="my_dialog_send">Отправить сообщение</string>
+    <string name="redactor">Редактор</string>
+    <string name="dialogs">Диалоги</string>
+    <string name="profile">Профиль</string>
+    <string name="encrypt_hint">Текст для шифрования / дешифрования отображается здесь…</string>
+    <string name="buttons_main">Выбрать действие</string>
+    <string name="create_algorithm_button_text">Создать алгоритм</string>
+    <string name="open_file_button_text">Открыть файл</string>
+    <string name="save_to_file_button_text">Сохранить в файл</string>
+    <string name="encrypt_text_button_text">Зашифровать текст</string>
+    <string name="decrypt_text_button_text">Расшифровать текст</string>
+    <string name="publish_on_wall_button_text">Опубликовать на своей стене</string>
+    <string name="offline">Offline</string>
+    <string name="online">Online</string>
+    <string name="friends_wall">Друзья и стена</string>
+    <string name="notes_list">Список записей</string>
+    <string name="wall">Стена</string>
+    <string name="loading">Загрузка…</string>
+    <string name="friends_count_in_list">Количество выводимых друзей в списке:</string>
+    <string name="posts_count_in_list">Количество выводимых постов для дешифрования:</string>
+    <string name="save_settings">Сохранить настройки</string>
+    <string name="save_file_name">Название сохраняемого файла:</string>
+    <string name="logout">Выйти</string>
+    <string name="dialogs_count">Количество выводимых диалогов:</string>
+    <string name="messages_array_size_in_dialog">Размер массива сообщений в диалоге:</string>
+    <string name="vk">vk</string>
+    <string name="login">Войти</string>
+    <string name="error_network">Нет подключения к сети</string>
+    <string name="login_info">Чтобы использовать все функции приложения вам необходимо войти в учётную запись ВК.</string>
+    <string name="network_trouble">Отсутствует подключение к интернету!</string>
+    <string name="key_info">Ключ должен содержать только английские символы и цифры.</string>
+
+    <string-array name="cryptNames">
+        <item>XOR</item>
+        <item>AES</item>
+        <item>BASE64</item>
+        <item>REVERSE</item>
+    </string-array>
+
+    <integer name="com_vk_sdk_AppId">7607020</integer>
+</resources>

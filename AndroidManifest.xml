@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ru.limedev.endecrypter">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="ru.limedev.endecrypter.MainActivity"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="ru.limedev.endecrypter.VKProfileActivity"
+            android:label="@string/profile_title"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity
+            android:name="ru.limedev.endecrypter.ToolsActivity"
+            android:label="@string/tools_title"
+            android:parentActivityName="ru.limedev.endecrypter.MainActivity"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity
+            android:name="ru.limedev.endecrypter.CreateAlgorithmActivity"
+            android:label="@string/algorithm_title"
+            android:parentActivityName="ru.limedev.endecrypter.MainActivity"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity
+            android:name="ru.limedev.endecrypter.VKDialogsActivity"
+            android:label="@string/dialogs_title">
+        </activity>
+        <activity
+            android:name="ru.limedev.endecrypter.VKMyDialogActivity"
+            android:label="@string/my_dialog_title"
+            android:parentActivityName="ru.limedev.endecrypter.VKDialogsActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+        <activity
+            android:name="ru.limedev.endecrypter.VKFriendsWallActivity"
+            android:label="@string/wall"
+            android:parentActivityName="ru.limedev.endecrypter.VKProfileActivity">
+        </activity>
+        <activity
+            android:name="ru.limedev.endecrypter.VKProfileToolsActivity"
+            android:label="@string/tools_title"
+            android:parentActivityName="ru.limedev.endecrypter.VKProfileActivity"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity
+            android:name="ru.limedev.endecrypter.VKLoginActivity"
+            android:label="@string/login"
+            android:parentActivityName="ru.limedev.endecrypter.MainActivity">
+        </activity>
+        <activity
+            android:name="ru.limedev.endecrypter.NetworkActivity"
+            android:label="@string/error_network">
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:id="@+id/ScrollView01"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp">
+
+            <EditText
+                android:id="@+id/textArea"
+                android:layout_width="match_parent"
+                android:layout_height="200dip"
+                android:layout_marginStart="10dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginBottom="5dip"
+                android:autofillHints=""
+                android:background="@drawable/layout_edit_bg"
+                android:gravity="start"
+                android:hint="@string/encrypt_hint"
+                android:padding="10dip"
+                android:scrollbars="vertical"
+                android:textColorLink="#FFFFFF"
+                tools:ignore="LabelFor, TextFields" />
+
+            <RelativeLayout
+                android:id="@+id/algorithmsButtonsGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textArea"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/createAlgorithmButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:onClick="openAlgorithmWindow"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:background="#00FFFFFF"
+                        android:contentDescription="@string/buttons_main"
+                        android:scaleType="centerInside"
+                        android:tint="@color/colorPrimary"
+                        app:srcCompat="@drawable/ic_add_white" />
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:text="@string/create_algorithm_button_text"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/openFileButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_toEndOf="@+id/createAlgorithmButton"
+                    android:onClick="openTextFile"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:background="#00FFFFFF"
+                        android:contentDescription="@string/buttons_main"
+                        android:scaleType="centerInside"
+                        android:tint="@color/colorPrimary"
+                        app:srcCompat="@drawable/ic_open_in_browser_white" />
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:text="@string/open_file_button_text"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/saveToFileButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_toEndOf="@+id/openFileButton"
+                    android:onClick="writeTextFile"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:background="#00FFFFFF"
+                        android:contentDescription="@string/buttons_main"
+                        android:scaleType="centerInside"
+                        android:tint="@color/colorPrimary"
+                        app:srcCompat="@drawable/ic_save_alt_white" />
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:text="@string/save_to_file_button_text"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/enDeCryptButtonsGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/algorithmsButtonsGroup"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="50dp"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/encryptText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:onClick="encryptText"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="70dp"
+                        android:background="#00FFFFFF"
+                        android:contentDescription="@string/buttons_main"
+                        android:scaleType="centerInside"
+                        android:tint="@color/colorPrimary"
+                        app:srcCompat="@drawable/ic_lock_white" />
+
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="30dp"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:text="@string/encrypt_text_button_text"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/decryptText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_toEndOf="@+id/encryptText"
+                    android:onClick="decryptText"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="70dp"
+                        android:background="#00FFFFFF"
+                        android:contentDescription="@string/buttons_main"
+                        android:scaleType="centerInside"
+                        android:tint="@color/colorPrimary"
+                        app:srcCompat="@drawable/ic_lock_open_white" />
+
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="30dp"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:text="@string/decrypt_text_button_text"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/publishOnWall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_toEndOf="@+id/decryptText"
+                    android:onClick="vkWallPublic"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="70dp"
+                        android:background="#00FFFFFF"
+                        android:contentDescription="@string/buttons_main"
+                        android:scaleType="centerInside"
+                        android:tint="@color/colorPrimary"
+                        app:srcCompat="@drawable/ic_grading_white" />
+
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="30dp"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:text="@string/publish_on_wall_button_text"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="#E0F2F1"
+        app:itemIconTint="@color/colorPrimary"
+        app:itemTextColor="@color/colorPrimary"
+        app:menu="@menu/bottom_navigation_menu" />
+
+</RelativeLayout>

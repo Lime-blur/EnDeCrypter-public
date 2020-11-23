@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/profileImageItem"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:contentDescription="@string/dialogs_avatar_photo"
+            app:srcCompat="@drawable/ic_account_circle" />
+
+        <TextView
+            android:id="@+id/profileName"
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:layout_toEndOf="@+id/profileImageItem"
+            android:fontFamily="sans-serif-medium"
+            android:paddingStart="10dp"
+            android:paddingEnd="0dp"
+            android:text="@string/loading"
+            android:textColor="#2B2B2B"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/profileOnline"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:layout_below="@+id/profileName"
+            android:layout_toEndOf="@+id/profileImageItem"
+            android:paddingStart="10dp"
+            android:paddingEnd="0dp"
+            android:text="@string/offline"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/profileStatus"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:layout_below="@+id/profileOnline"
+            android:layout_toEndOf="@+id/profileImageItem"
+            android:paddingStart="10dp"
+            android:paddingEnd="0dp"
+            android:singleLine="true"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/friendsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@+id/profileImageItem"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif"
+            android:gravity="start|center_vertical"
+            android:text="@string/friends_wall"
+            android:textColor="#2B2B2B"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/editTextFind"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/friendsTitle"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="0dp"
+            android:autofillHints=""
+            android:background="@drawable/layout_search_edit_bg"
+            android:gravity="start|center_vertical"
+            android:hint="Искать человека..."
+            android:padding="10dp"
+            android:textColorLink="#FFFFFF"
+            tools:ignore="HardcodedText, LabelFor, TextFields" />
+
+        <ListView
+            android:id="@+id/friendsListView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/editTextFind"
+            android:layout_marginBottom="47dip"
+            android:background="#F3F3F3"
+            android:divider="@null"
+            tools:ignore="NestedScrolling"
+            tools:visibility="visible" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/profile_bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="#E0F2F1"
+        app:itemIconTint="@color/colorPrimary"
+        app:itemTextColor="@color/colorPrimary"
+        app:menu="@menu/bottom_navigation_menu" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/layout_white_bg"
+        android:padding="15dp"
+        android:scrollbarAlwaysDrawHorizontalTrack="false"
+        android:scrollbarAlwaysDrawVerticalTrack="false"
+        android:visibility="gone"
+        android:elevation="999dp"/>
+
+</RelativeLayout>

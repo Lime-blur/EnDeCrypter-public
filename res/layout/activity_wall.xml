@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:id="@+id/vkRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/profileBottomFriendsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:fontFamily="sans-serif"
+                android:gravity="start|center_vertical"
+                android:text="@string/notes_list"
+                android:textColor="#2B2B2B"
+                android:layout_marginHorizontal="3dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="24sp" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/profileBottomProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/layout_white_bg"
+        android:padding="15dp"
+        android:scrollbarAlwaysDrawHorizontalTrack="false"
+        android:scrollbarAlwaysDrawVerticalTrack="false"
+        android:visibility="gone"
+        android:elevation="999dp"/>
+
+</RelativeLayout>
