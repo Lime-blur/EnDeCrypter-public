@@ -1,29 +1,5 @@
 package ru.limedev.endecrypter;
 
-/*
- * MIT License
- *
- * Copyright (c) 2020 Tim Meleshko
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE.
- */
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
@@ -31,6 +7,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -59,11 +36,13 @@ public class VKProfileToolsActivity extends AppCompatActivity {
         EditText postsCount = findViewById(R.id.postsCount);
         EditText dialogsCount = findViewById(R.id.dialogsCount);
         EditText myDialogMessagesCount = findViewById(R.id.myDialogMessagesCount);
+        Switch switchTurboVersion = findViewById(R.id.switchTurboVersion);
 
         friendsCount.setText(String.valueOf(UserSettings.appFriendsCount));
         postsCount.setText(String.valueOf(UserSettings.appPostsCount));
         dialogsCount.setText(String.valueOf(UserSettings.appDialogsCount));
         myDialogMessagesCount.setText(String.valueOf(UserSettings.appMyDialogMessagesCount));
+        switchTurboVersion.setChecked(UserSettings.appSwitchTurboVersion);
     }
 
     public void saveProfileSettings(View view) {
@@ -75,6 +54,8 @@ public class VKProfileToolsActivity extends AppCompatActivity {
         String dialogsCountText = dialogsCount.getText().toString();
         EditText myDialogMessagesCount = findViewById(R.id.myDialogMessagesCount);
         String myDialogMessagesCountText = myDialogMessagesCount.getText().toString();
+        Switch switchTurboVersion = findViewById(R.id.switchTurboVersion);
+        Boolean isSwitchTurboVersion = switchTurboVersion.isChecked();
 
         try {
             int friendsCountNumber = Integer.parseInt(friendsCountText);
@@ -87,10 +68,12 @@ public class VKProfileToolsActivity extends AppCompatActivity {
             editor.putInt(UserSettings.appPostsCountName, postsCountNumber);
             editor.putInt(UserSettings.appDialogsCountName, dialogsCountNumber);
             editor.putInt(UserSettings.appMyDialogMessagesCountName, myDialogMessagesCountNumber);
+            editor.putBoolean(UserSettings.appSwitchTurboVersionName, isSwitchTurboVersion);
             UserSettings.appFriendsCount = friendsCountNumber;
             UserSettings.appPostsCount = postsCountNumber;
             UserSettings.appDialogsCount = dialogsCountNumber;
             UserSettings.appMyDialogMessagesCount = myDialogMessagesCountNumber;
+            UserSettings.appSwitchTurboVersion = isSwitchTurboVersion;
 
             editor.apply();
 

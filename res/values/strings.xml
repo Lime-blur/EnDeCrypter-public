@@ -40,6 +40,7 @@
     <string name="login_info">Чтобы использовать все функции приложения вам необходимо войти в учётную запись ВК.</string>
     <string name="network_trouble">Отсутствует подключение к интернету!</string>
     <string name="key_info">Ключ должен содержать только английские символы и цифры.</string>
+    <string name="turbo_updating">Ускоренное обновление данных:</string>
 
     <string-array name="cryptNames">
         <item>XOR</item>

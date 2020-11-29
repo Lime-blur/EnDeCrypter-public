@@ -128,7 +128,6 @@
             android:layout_marginLeft="10dip"
             android:layout_marginEnd="10dip"
             android:layout_marginRight="10dip"
-            android:layout_marginBottom="10dip"
             android:autofillHints=""
             android:background="@drawable/layout_edit_bg"
             android:gravity="center_vertical"
@@ -138,12 +137,37 @@
             android:textColorLink="#FFFFFF"
             tools:ignore="LabelFor, TextFields" />
 
+        <TextView
+            android:id="@+id/switchTurboVersionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/myDialogMessagesCount"
+            android:layout_marginStart="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="10dip"
+            android:layout_marginEnd="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginBottom="10dip"
+            android:text="@string/turbo_updating"
+            android:textSize="18sp" />
+
+        <Switch
+            android:id="@+id/switchTurboVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/switchTurboVersionTitle"
+            android:layout_marginStart="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginEnd="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginBottom="10dip" />
+
         <Button
             android:id="@+id/saveSettings"
             style="@android:style/Widget.Holo.Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/myDialogMessagesCount"
+            android:layout_below="@+id/switchTurboVersion"
             android:layout_marginStart="10dip"
             android:layout_marginLeft="10dip"
             android:layout_marginEnd="10dip"

@@ -1,29 +1,5 @@
 package ru.limedev.endecrypter.core;
 
-/*
- * MIT License
- *
- * Copyright (c) 2020 Tim Meleshko
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE.
- */
-
 public final class Constants {
     public static final int PICKFILE_RESULT_CODE = 0;
     public static final String INTENT_TYPE = "*/*";
@@ -43,6 +19,7 @@ public final class Constants {
     public static final int DEFAULT_POST_COUNT = 100;
     public static final int DEFAULT_DIALOGS_COUNT = 20;
     public static final int DEFAULT_DIALOG_MESSAGES_COUNT = 50;
+    public static final boolean DEFAULT_SWITCH_TURBO_VERSION = false;
     public static final String DEFAULT_FILE_SAFE = "code.txt";
     public static final String DEFAULT_ALGORITHM_SAFE = "{\"0_XOR\":\"defaultKey\",\"1_AES\":\"defaultKey\",\"2_BASE64\":\"NONE\",\"3_REVERSE\":\"NONE\"}";
     public static final String NONE_KEY_TEXT = "NONE";
@@ -74,6 +51,7 @@ public final class Constants {
     public static final int MAX_CALLS_BEFORE_UPDATE = 10;
     public static final int VK_RUNNABLE_DELAY = 800;
     public static final int VK_CALL_DELAY = 2500;
+    public static final int VK_CALL_DELAY_TURBO = 500;
 
     public static final String FILE_SAVED = "Файл сохранён: ";
     public static final String UNWRITABLE_STORAGE = "Нельзя сделать запись в текущую дерикторию!";
